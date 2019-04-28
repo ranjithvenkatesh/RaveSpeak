@@ -1,0 +1,26 @@
+﻿@model RaveSpeak.Models.TextModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to RaveSpeak</h1>
+    <p>Learn about <a href="https://www.ranjithvenkatesh.com">Helping the Speaker Shine!</a>.</p>
+</div>
+
+<div class="row">
+    <form asp-action="Index" asp-controller="Home">
+        <textarea asp-for="UserText" rows="20" cols="75">Please type/copy your text here</textarea>
+        <br />
+        <input type="submit" value="Analyse Text" />
+    </form>
+    <div class="row">
+        <a href="#" data-toggle="tooltip" title="The 'Flesch–Kincaid Grade Level Formula' presents a score as a U.S. grade level,
+                                                 making it easier for teachers, parents, librarians, and others to judge the readability
+                                                 level of various books and texts.">Flesch–Kincaid Grade Level</a>        
+    </div>
+    <div class="row">
+        <h3>@ViewBag.FleschKincaidGradeLevel / 12</h3>
+    </div>
+</div>
