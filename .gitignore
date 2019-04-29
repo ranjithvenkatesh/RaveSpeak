@@ -7,3 +7,5 @@
 /RaveSpeak/obj
 /RaveSpeak/Properties/PublishProfiles/localhost.pubxml.user
 /RaveSpeak/RaveSpeak.csproj.user
+/RaveSpeak.UnitTests/bin/Debug/netcoreapp2.2
+/RaveSpeak.UnitTests/obj
