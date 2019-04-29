@@ -22,35 +22,35 @@ namespace RaveSpeak.UnitTests.Helpers
         public void FleschKincaidGradeLevelTest()
         {            
             // Assert
-            Assert.AreEqual(2.3, textStatisticsHelper.FleschKincaidGradeLevel);
+            Assert.AreEqual("2.3", textStatisticsHelper.FleschKincaidGradeLevel);
         }
 
         [TestMethod]
         public void AutomatedReadabilityIndexTest()
         {
             // Assert
-            Assert.AreEqual(1.4, textStatisticsHelper.AutomatedReadabilityIndex);
+            Assert.AreEqual("1.4", textStatisticsHelper.AutomatedReadabilityIndex);
         }
 
         [TestMethod]
         public void ColemanLiauIndexTest()
         {
             // Assert
-            Assert.AreEqual(7.1, textStatisticsHelper.ColemanLiauIndex);
+            Assert.AreEqual("7.1", textStatisticsHelper.ColemanLiauIndex);
         }
 
         [TestMethod]
         public void FleschKincaidReadingEaseTest()
         {
             // Assert
-            Assert.AreEqual(94.3, textStatisticsHelper.FleschKincaidReadingEase);
+            Assert.AreEqual("94.3", textStatisticsHelper.FleschKincaidReadingEase);
         }
 
         [TestMethod]
         public void GunningFogScoreTest()
         {
             // Assert
-            Assert.AreEqual(3.6, textStatisticsHelper.GunningFogScore);
+            Assert.AreEqual("3.6", textStatisticsHelper.GunningFogScore);
         }
         
         [TestMethod]

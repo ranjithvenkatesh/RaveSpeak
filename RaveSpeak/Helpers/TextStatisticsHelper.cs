@@ -1,24 +1,26 @@
-﻿namespace RaveSpeak.Helpers
+﻿using System.Globalization;
+
+namespace RaveSpeak.Helpers
 {
     public class TextStatisticsHelper
     {
-        public double AutomatedReadabilityIndex { get; set; }
-        public double ColemanLiauIndex { get; set; }
-        public double FleschKincaidGradeLevel { get; set; }
-        public double FleschKincaidReadingEase { get; set; }
-        public double GunningFogScore { get; set; }
-        public double SMOGIndex { get; set; }
+        public string AutomatedReadabilityIndex { get; set; }
+        public string ColemanLiauIndex { get; set; }
+        public string FleschKincaidGradeLevel { get; set; }
+        public string FleschKincaidReadingEase { get; set; }
+        public string GunningFogScore { get; set; }
+        public string SMOGIndex { get; set; }
 
         public TextStatisticsHelper(string text)
         {
             var statistics = TextStatistics.TextStatistics.Calculate(text);
 
-            AutomatedReadabilityIndex = statistics.AutomatedReadabilityIndex;
-            ColemanLiauIndex = statistics.ColemanLiauIndex;
-            FleschKincaidGradeLevel = statistics.FleschKincaidGradeLevel;
-            FleschKincaidReadingEase = statistics.FleschKincaidReadingEase;
-            GunningFogScore = statistics.GunningFogScore;
-            SMOGIndex = statistics.SMOGIndex;
+            AutomatedReadabilityIndex = statistics.AutomatedReadabilityIndex.ToString(CultureInfo.InvariantCulture);
+            ColemanLiauIndex = statistics.ColemanLiauIndex.ToString(CultureInfo.InvariantCulture);
+            FleschKincaidGradeLevel = statistics.FleschKincaidGradeLevel.ToString(CultureInfo.InvariantCulture);
+            FleschKincaidReadingEase = statistics.FleschKincaidReadingEase.ToString(CultureInfo.InvariantCulture);
+            GunningFogScore = statistics.GunningFogScore.ToString(CultureInfo.InvariantCulture);
+            SMOGIndex = statistics.SMOGIndex.ToString(CultureInfo.InvariantCulture);
         }
 
         public string GetStatisticsReport()
