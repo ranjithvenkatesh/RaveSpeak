@@ -7,11 +7,11 @@ namespace RaveSpeak.UnitTests.Helpers
     [TestClass]
     public class TextStatisticsHelperTests
     {
-        private string sentence;
-        private TextStatisticsHelper textStatisticsHelper;
+        private static string sentence;
+        private static TextStatisticsHelper textStatisticsHelper;
 
-        [TestInitialize]
-        public void Initialize()
+        [ClassInitialize]
+        public static void TextStatisticsHelperTestsInitialize(TestContext context)
         {
             // Arrange and Act
             sentence = "the quick brown fox jumps over the lazy dog";            
