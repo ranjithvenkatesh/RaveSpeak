@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaveSpeak", "RaveSpeak\RaveSpeak.csproj", "{275E6652-4A16-4888-ADC9-3B609146EA6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaveSpeak.UnitTests", "RaveSpeak.UnitTests\RaveSpeak.UnitTests.csproj", "{E86998BC-AE85-438A-9BE5-A1AC2F7F078B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaveSpeak.UnitTests", "RaveSpeak.UnitTests\RaveSpeak.UnitTests.csproj", "{E86998BC-AE85-438A-9BE5-A1AC2F7F078B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FB7F1152-77DF-49F9-9AE5-80CC24A72048}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
