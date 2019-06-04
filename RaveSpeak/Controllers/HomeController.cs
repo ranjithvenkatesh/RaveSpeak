@@ -2,11 +2,17 @@
 using Microsoft.AspNetCore.Mvc;
 using RaveSpeak.Helpers;
 using RaveSpeak.Models;
+using RaveSpeakML.Service;
 
 namespace RaveSpeak.Controllers
 {
     public class HomeController : Controller
     {
+        private IRaveSpeakMLService raveSpeakMLService;
+        public HomeController(IRaveSpeakMLService raveSpeakMLService)
+        {
+            this.raveSpeakMLService = raveSpeakMLService;
+        }
         public IActionResult Index()
         {
             ViewBag.FleschKincaidGradeLevel = "X";
@@ -18,6 +24,10 @@ namespace RaveSpeak.Controllers
         {
             var textStatisticsHelper = new TextStatisticsHelper(model.UserText);
             ViewBag.FleschKincaidGradeLevel = textStatisticsHelper.FleschKincaidGradeLevel;
+
+            var modelOutput = this.raveSpeakMLService.Predict(model.UserText);
+            ViewBag.Sentiment = modelOutput.Prediction ? "Positive" : "Negative";
+
             return View();
         }
 

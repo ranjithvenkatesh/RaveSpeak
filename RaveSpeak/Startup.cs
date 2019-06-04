@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RaveSpeakML.Service;
 
 namespace RaveSpeak
 {
@@ -30,9 +31,10 @@ namespace RaveSpeak
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddSingleton<IRaveSpeakMLService, RaveSpeakMLService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

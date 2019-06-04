@@ -9,3 +9,9 @@
 /RaveSpeak/RaveSpeak.csproj.user
 /RaveSpeak.UnitTests/bin/Debug/netcoreapp2.2
 /RaveSpeak.UnitTests/obj
+/RaveSpeak.UITests/bin/Debug/netcoreapp2.2
+/RaveSpeak.UITests/obj
+/RaveSpeakML.ConsoleApp/bin
+/RaveSpeakML.ConsoleApp/obj
+/RaveSpeakML.Model/bin
+/RaveSpeakML.Model/obj
