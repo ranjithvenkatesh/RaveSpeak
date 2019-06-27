@@ -15,3 +15,6 @@
 /RaveSpeakML.ConsoleApp/obj
 /RaveSpeakML.Model/bin
 /RaveSpeakML.Model/obj
+/packages
+/RaveSpeak.SentimentAnalysisService/obj
+/RaveSpeak.SentimentAnalysisService/bin/Debug/netstandard2.0

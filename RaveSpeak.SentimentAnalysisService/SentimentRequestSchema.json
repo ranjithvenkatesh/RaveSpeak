@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "properties": {
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "description": "This is the 2 letter ISO 639-1 representation of a language.\r\n            For example, use \"en\" for English; \"es\" for Spanish etc.,",
+            "type": "string"
+          },
+          "id": {
+            "description": "Unique, non-empty document identifier.",
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      },
+      "readOnly": true
+    }
+  },
+  "example": "{\r\n  \"documents\": [\r\n    {\r\n      \"language\": \"en\",\r\n      \"id\": \"1\",\r\n      \"text\": \"Hello world. This is some input text that I love.\"\r\n    },\r\n    {\r\n      \"language\": \"fr\",\r\n      \"id\": \"2\",\r\n      \"text\": \"Bonjour tout le monde\"\r\n    },\r\n    {\r\n      \"language\": \"es\",\r\n      \"id\": \"3\",\r\n      \"text\": \"La carretera estaba atascada. Había mucho tráfico el día de ayer.\"\r\n    }\r\n  ]\r\n}"
+}

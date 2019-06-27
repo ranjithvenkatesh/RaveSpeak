@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "properties": {
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Unique document identifier.",
+            "type": "string"
+          },
+          "score": {
+            "format": "double",
+            "description": "A decimal number between 0 and 1 denoting the sentiment of the document. \r\n            A score above 0.7 usually refers to a positive document while a score below 0.3 normally has a negative connotation.\r\n            Mid values refer to neutral text.",
+            "type": "number"
+          }
+        }
+      },
+      "readOnly": true
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Input document unique identifier the error refers to.",
+            "type": "string"
+          },
+          "message": {
+            "description": "Error message.",
+            "type": "string"
+          }
+        }
+      },
+      "readOnly": true
+    }
+  }
+}
